@@ -160,26 +160,37 @@ $mail->ClearAttachments();
 				<div class="contact_right">
 				  <div class="contact-form">
 				  	<h3>Contact Us</h3>
-					    <form method="post" action="contact-post.html">
+					    <form method="post" action="contact.php">
 					    	<div>
 						    	<span><label>name</label></span>
-						    	<span><input name="nome" type="text" class="textbox"></span>
+						    	<span><input name="nome" type="text" id="nome" class="textbox"></span>
 						    </div>
 						    <div>
 						    	<span><label>e-mail</label></span>
-						    	<span><input name="email" type="text" class="textbox"></span>
+						    	<span><input name="email" type="text" id="email" class="textbox"></span>
 						    </div>
 						    <div>
 						     	<span><label>mobile</label></span>
-						    	<span><input name="telefone" type="text" class="textbox"></span>
+						    	<span><input name="telefone" type="text" id="telefone" class="textbox"></span>
 						    </div>
 						    <div>
 						    	<span><label>subject</label></span>
-						    	<span><textarea name="message"> </textarea></span>
+						    	<span><textarea name="message" id="message"> </textarea></span>
 						    </div>
 						   <div>
 						   		<span><input type="submit" value="submit us"></span>
 						  </div>
+  <?php
+            if (!($a === NULL)) {
+echo "E-mail enviado com sucesso!";
+} else if(isset($body)) {
+echo "Não foi possível enviar o e-mail.
+ 
+";
+echo "Informações do erro: 
+" . $mail->ErrorInfo;
+}
+        ?>
 					    </form>
 				    </div>
   				</div>		

@@ -186,16 +186,36 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 </div>
                 <!-- end popup -->
                 <!-- start gallery  -->
+                <div id="category"></div>
                 <div class="container">
-                    <ul id="filters" class="clearfix">
-                        <li><span class="filter" style="display:none;" data-filter="premium"><h1>Premium</h1></span></li>
-                        <li><span class="filter active" data-filter="cur imo inf edu ser"><font style="font-size:24px;">Todos</font></span></li> &diams;
-                        <li><span class="filter" data-filter="cur"><font style="font-size:24px;">Cursos</span></li> &diams;
-                        <li><span class="filter" data-filter="imo"><font style="font-size:24px;">Imóveis</span></li> &diams;
-                        <li><span class="filter" data-filter="inf"><font style="font-size:24px;">Informática</span></li> &diams;
-                        <li><span class="filter" data-filter="edu"><font style="font-size:24px;">Educação</span></li> &diams;
-                        <li><span class="filter" data-filter="ser"><font style="font-size:24px;">Serviços</span></li> &diams;
-                    </ul>
+                        <ul id="filters" class="clearfix">
+                            <nav id="primary_nav_wrap">
+                                <ul>
+                                    <!--<li class="current-menu-item"><a href="#">Home</a></li>-->
+                                    <li><span class="filter" style="display:none;" data-filter="premium"><h1>Premium</h1></span></li>
+                                    <li>
+                                        <span href="" class="filter active" data-filter="cur imo inf edu ser">Todos</span>
+                                    </li>
+
+                                    <li>
+                                        <span href="#" class="filter" data-filter="cur">Cursos</span>
+                                        <ul>
+                                            <li><span class="filter" href="#" id="sub-menu" data-filter="cur-tec">Técnico</span></li>
+                                            <li><span class="filter" href="#" id="sub-menu" data-filter="cur-con">Concursos</span></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <span href="" class="filter" data-filter="imo">Imóveis</span></li>
+                                    <li>
+                                        <span href="" class="filter" data-filter="inf">Informática</span></li>
+                                    <li>
+                                        <span href="" class="filter" data-filter="edu">Educação</span></li>
+                                    <li>
+                                        <span href="" class="filter" data-filter="ser">Serviços</span></li>
+
+                                </ul>
+                            </nav>
+                        </ul>
                     <div class="right_banner">
                         <div class="span1_of_4">
                             <h4>Anúncios</h4>
@@ -369,7 +389,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 </div>
                             </a>
                             <a class="popup-with-zoom-anim" href="petrosolda.htm">
-                                <div class="portfolio cur" data-cat="cur">
+                                <div class="portfolio cur cur-tec" data-cat="cur">
                                     <div class="portfolio-wrapper">
                                         <img src="web/images2/logopetrosolda2.gif" alt="Image 2" />
                                         <div class="label">
@@ -381,7 +401,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     </div>
                                 </div>
                             </a>
-                             <a class="popup-with-zoom-anim" href="soldasamericas.htm">
+                            <a class="popup-with-zoom-anim" href="soldasamericas.htm">
                                 <div class="portfolio ser" data-cat="ser">
                                     <div class="portfolio-wrapper">
                                         <img src="web/images2/soldaamericas2.jpg" alt="Image 2" />
@@ -394,7 +414,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     </div>
                                 </div>
                             </a>
-                             <a class="popup-with-zoom-anim" href="petrolink.htm">
+                            <a class="popup-with-zoom-anim" href="petrolink.htm">
                                 <div class="portfolio ser" data-cat="ser">
                                     <div class="portfolio-wrapper">
                                         <img src="web/images2/petrolink2.jpg" alt="Image 2" />
@@ -407,7 +427,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     </div>
                                 </div>
                             </a>
-                             <a class="popup-with-zoom-anim" href="festas.html">
+                            <a class="popup-with-zoom-anim" href="festas.html">
                                 <div class="portfolio ser" data-cat="ser">
                                     <div class="portfolio-wrapper">
                                         <img src="web/images2/tudo%20festa.jpg" alt="Image 2" />
@@ -420,7 +440,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     </div>
                                 </div>
                             </a>
-                             <a class="popup-with-zoom-anim" href="inicial_informatica.html">
+                            <a class="popup-with-zoom-anim" href="inicial_informatica.html">
                                 <div class="portfolio inf" data-cat="inf">
                                     <div class="portfolio-wrapper">
                                         <img src="web/images2/btinfo.jpg" alt="Image 2" />
@@ -433,8 +453,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     </div>
                                 </div>
                             </a>
-                             <a class="popup-with-zoom-anim" href="aprova.htm">
-                                <div class="portfolio cur" data-cat="cur">
+                            <a class="popup-with-zoom-anim" href="aprova.htm">
+                                <div class="portfolio cur cur-con" data-cat="cur">
                                     <div class="portfolio-wrapper">
                                         <img src="web/images2/aprova.jpg" alt="Image 2" />
                                         <div class="label">
@@ -446,7 +466,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     </div>
                                 </div>
                             </a>
-                             <a class="popup-with-zoom-anim" href="asbrasileiras.html">
+                            <a class="popup-with-zoom-anim" href="asbrasileiras.html">
                                 <div class="portfolio ser" data-cat="ser">
                                     <div class="portfolio-wrapper">
                                         <img src="web/images2/as_brasileiras_banner.jpg" alt="Image 2" />
@@ -459,7 +479,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     </div>
                                 </div>
                             </a>
-                             <a class="popup-with-zoom-anim" href="imoveis.htm">
+                            <a class="popup-with-zoom-anim" href="imoveis.htm">
                                 <div class="portfolio imo" data-cat="imo">
                                     <div class="portfolio-wrapper">
                                         <img src="web/images2/imoveis3.jpg" alt="Image 2" />
@@ -472,7 +492,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     </div>
                                 </div>
                             </a>
-                             <a class="popup-with-zoom-anim" href="cetef.htm">
+                            <a class="popup-with-zoom-anim" href="cetef.htm">
                                 <div class="portfolio cur" data-cat="cur">
                                     <div class="portfolio-wrapper">
                                         <img src="web/images2/logo%20CETEF.jpg" alt="Image 2" />
@@ -953,11 +973,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     </div>
                                 </div>
                             </a>
-                           
-                            
-                            
-                           
-                           
+
 
                         </div>
                     </div>
@@ -1001,12 +1017,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </div>
                     </div>
                     <div class="span1_of_4">
-                   
-                   
+
+
                     </div>
                     <div class="span1_of_4">
                         <h4>Anuncie!</h4>
-                      <p>Divulgue sua empresa ou serviço. </p>
+                        <p>Divulgue sua empresa ou serviço. </p>
                         <span>Address</span>
                         <p class="top">500 Lorem Ipsum Dolor Sit,</p>
                         <p>22-56-2-9 Sit Amet,</p>

@@ -71,6 +71,68 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </div>
 </div>
 <!-- start main -->
+<!-- start phpmailer -->
+   <?php
+ 
+// Inclui o arquivo class.phpmailer.php localizado na pasta phpmailer
+require("phpmailer/class.phpmailer.php");
+
+//require("lib/PHPMailer/PHPMailerAutoload.php"); 
+// Inicia a classe PHPMailer
+$mail = new PHPMailer();
+ 
+// Define os dados do servidor e tipo de conexão
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+//$mail->IsSMTP(); 
+//$mail->Host = 'smtp.mandrillapp.com'; 
+//$mail->Port = 587;
+//$mail->SMTPAuth = true; // Usar autenticação SMTP (obrigatório para smtp.seudomínio.com.br)
+//$mail->Username = 'johnn_lds@hotmail.com'; // Usuário do servidor SMTP (endereço de email)
+//$mail->Password = '52X5OayShKOJY-1q_1ssKQ'; // Senha do servidor SMTP (senha do email usado)
+//$mail->SMTPSecure = 'tls';
+ 
+// Define o remetente
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$mail->From = $_POST['email']; // Seu e-mail
+$mail->Sender = $_POST['email']; // Seu e-mail
+$mail->FromName = $_POST['nome']; // Seu nome
+ 
+// Define os destinatário(s)
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$mail->AddAddress('contato@magrasspontapora.com.br', 'Santini');
+
+//$mail->AddCC('ciclano@site.net', 'Ciclano'); // Copia
+//$mail->AddBCC('fulano@dominio.com.br', 'Fulano da Silva'); // Cópia Oculta
+ 
+// Define os dados técnicos da Mensagem
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$mail->IsHTML(true); // Define que o e-mail será enviado como HTML
+//$mail->CharSet = 'iso-8859-1'; // Charset da mensagem (opcional)
+ 
+// Define a mensagem (Texto e Assunto)
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$mail->Subject  = "Fale Conosco - Site Santini"; // Assunto da mensagem
+$a = $_POST['message'];
+$b = $_POST['telefone'];
+$c = $a.'<br/>'. 'Telefone do cliente: '.$b;
+$mail->Body = $c;
+//$mail->AltBody = 'Este é o corpo da mensagem de teste, em Texto Plano!';
+ 
+// Define os anexos (opcional)
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+//$mail->AddAttachment("/home/login/documento.pdf", "novo_nome.pdf");  // Insere um anexo
+ 
+// Envia o e-mail
+$enviado = $mail->Send();
+
+// Limpa os destinatários e os anexos
+$mail->ClearAllRecipients();
+$mail->ClearAttachments();
+ 
+// Exibe uma mensagem de resultado
+
+?>
+<!-- end php mailer -->
 <div class="main_bg">
 <div class="wrap">
 	<div class="main">
@@ -98,26 +160,37 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="contact_right">
 				  <div class="contact-form">
 				  	<h3>Contact Us</h3>
-					    <form method="post" action="contact-post.html">
+					    <form method="post" action="contact.php">
 					    	<div>
 						    	<span><label>name</label></span>
-						    	<span><input name="userName" type="text" class="textbox"></span>
+						    	<span><input name="nome" type="text" class="textbox"></span>
 						    </div>
 						    <div>
 						    	<span><label>e-mail</label></span>
-						    	<span><input name="userEmail" type="text" class="textbox"></span>
+						    	<span><input name="email" type="text" class="textbox"></span>
 						    </div>
 						    <div>
 						     	<span><label>mobile</label></span>
-						    	<span><input name="userPhone" type="text" class="textbox"></span>
+						    	<span><input name="telefone" type="text" class="textbox"></span>
 						    </div>
 						    <div>
 						    	<span><label>subject</label></span>
-						    	<span><textarea name="userMsg"> </textarea></span>
+						    	<span><textarea name="message"> </textarea></span>
 						    </div>
 						   <div>
 						   		<span><input type="submit" value="submit us"></span>
 						  </div>
+  <?php
+            if (!($a === NULL)) {
+echo "E-mail enviado com sucesso!";
+} else if(isset($body)) {
+echo "Não foi possível enviar o e-mail.
+ 
+";
+echo "Informações do erro: 
+" . $mail->ErrorInfo;
+}
+        ?>
 					    </form>
 				    </div>
   				</div>		
