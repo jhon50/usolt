@@ -319,7 +319,9 @@ body {
 }
 /*start main */
 .main_bg{
-	background: #34495E;
+	background-color: #34495E;
+    background-image: url(/usolt/web/images/blue_bg.png);
+    
 }
 .main{
 	padding: 4%;
@@ -1822,16 +1824,6 @@ span.tab-img{
 	.contact-form input[type="text"], .contact-form textarea {
 		width: 90.3333%;
 	}
-}
-#category
-{
-    background: url(/usolt/web/images/blue_bg.jpg) repeat-x;
-    position:absolute;
-    left:-400px;
-    height:200px;
-    width:1920px !important;
-    opacity: 0.3;
-   
 }
 #sub-menu
 {
