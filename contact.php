@@ -99,7 +99,7 @@ $mail->FromName = $_POST['nome']; // Seu nome
  
 // Define os destinatário(s)
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-$mail->AddAddress('contato@magrasspontapora.com.br', 'Santini');
+$mail->AddAddress('contato@onboardidiomas.com.br', 'Onboard');
 
 //$mail->AddCC('ciclano@site.net', 'Ciclano'); // Copia
 //$mail->AddBCC('fulano@dominio.com.br', 'Fulano da Silva'); // Cópia Oculta
@@ -111,7 +111,7 @@ $mail->IsHTML(true); // Define que o e-mail será enviado como HTML
  
 // Define a mensagem (Texto e Assunto)
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-$mail->Subject  = "Fale Conosco - Site Santini"; // Assunto da mensagem
+$mail->Subject  = "Fale Conosco - Site Onboard"; // Assunto da mensagem
 $a = $_POST['message'];
 $b = $_POST['telefone'];
 $c = $a.'<br/>'. 'Telefone do cliente: '.$b;
