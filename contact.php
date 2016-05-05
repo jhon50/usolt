@@ -99,7 +99,7 @@ $mail->FromName = $_POST['nome']; // Seu nome
  
 // Define os destinatário(s)
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-$mail->AddAddress('contato@onboardidiomas.com.br', 'Onboard');
+$mail->AddAddress('onboardidiomas@outlook.com', 'Onboard');
 
 //$mail->AddCC('ciclano@site.net', 'Ciclano'); // Copia
 //$mail->AddBCC('fulano@dominio.com.br', 'Fulano da Silva'); // Cópia Oculta
